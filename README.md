@@ -53,6 +53,20 @@ Azure Cache For Redis? Oh yes , this is Azure Managed Service for Redis using �
 
 You are Sole responsible for Maintaining data consistency 
 
+This applies to any and All Databases available in Market be it RDBMS/DBMS or No SQLs
+
+Hooray…..    
+
+No more pain now with ‘Redis As Primary Database’
+With huge demand of Redis Cache, Redis has made its Database available so that you can directly use ‘Redis DB’ as the Primary Database as opposed to those 
+SQL, Oracle ,Mongo, Cosmos, Cassandra DBS.
+
+The Benefit?
+
+No More Pattern Headache for maintaining Data Consistency / Eventual Consistency. (Step2: is obsolete now if you are reading the article). 
+The Redis DB provides automated data caching in RAM-Memory while Reading Data from Redis DB.  You just forget how to maintain cache when everything is being served from Memory Cache. But yes the concern for Redis on Windows still persists. And the Solution is:
+
+REDIS ENTERPRISE CLOUD
 
 
 
