@@ -1,4 +1,4 @@
-# Redis-As-PromaryDB
+# Redis-As-PrimaryDB
 
 Redis Cache – Redis As Primary Database
 
