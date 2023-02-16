@@ -31,14 +31,14 @@ For this there are several approaches/patterns available and most precisely they
 	
 [There are many sub variants also available]
 
-1: With Write-through: You use Redis as Source Of Truth and then allow Redis to save the changes in SQL DB – Or Primary Database – and the saving can be done  
+1: With Write-through: You use Redis cacche as Source Of Truth and then allow Redis to save the changes in SQL DB – Or Primary Database – and the saving can be done  
    asynchronously or in Bulk
    
 2: Read-Through Pattern: In this technique, you use ‘Cache Miss’ technique and when no data found in cache, you can read the Primary DB and load the same data in Cache 
    to return response.
    
-3: Expiry Pattern: It is applied when there is Command behavior like Create/Update/Delete, you delete the Cache and updates the primary database. So next time users 
-   will get data by Cache-Miss technique to be latest.
+3: Expiry Pattern: It is applied when there is Command behavior like Create/Update/Delete, you delete the Cache and then updates the primary database. 
+   So next time users will get data by Cache-Miss technique to be latest.
 
 The challenges will be now which one above is the best suited for you?
 
