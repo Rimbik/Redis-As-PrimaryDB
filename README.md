@@ -19,7 +19,8 @@ With the given scenario now you have 2 Jobs to perform:
 
 2: Maintain/sync the data also in Redis Cache
 
-Then return the data from Redis Cache
+Then return the data from Redis Cache...
+
 When you read many articles, videos …. Hardly people talk about the Step:2 above as pretend as if Step:2 does the entire thing when the reality is, it is you have to maintain the data sync between your Primary database (in this case SQL Database) and Redis Cache. So what you do is - You read the data from SQL Db then store it to Redis Cache yourself.  Now at this stage you know - nothing is automatic, there is a new task to load data in Redis Cache and its you have to explicitly maintain the Consistency/Accuracy of data replication between SQL DB and Redis Cache.
 
 For this there are several approaches/patterns available and most precisely they are known as
