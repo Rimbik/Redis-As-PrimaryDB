@@ -45,11 +45,12 @@ The challenges will be now which one above is the best suited for you?
 Because all the above has some Advantages and Minor to Major disadvantages as well.
 It is very important that you maintain “Eventual Consistency” in Redis Cache.  The industry de facto standard is ‘Write-Through’ Pattern by which you use Redis cache as Source Of Truth and Let Redis update your underlying Primary DB silently in the background. 
 
-Now here is 1 problem. 
+[Now here is 1 problem. ]
 
 The technique does not work well in Windows O/S because of Fork Write mechanism that is used by Redis – does not work very well in Windows and There is no official support from Microsoft if you use Redis on Windows ☹
 
 Windows uses WSL2 (Windows Subsystem for Linux -2) to run Redis on Windows and we do not know who is better among ‘Redis on Linux’ vs ‘Redis on Windows’. 
+{ Some people says things runs better in WSL1 : but Redis on Windows runs on WSL2}
 
 Now at this stage, you are landed up with ‘Azure Cache for Redis’ – wait wait
 
