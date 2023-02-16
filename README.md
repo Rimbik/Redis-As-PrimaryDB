@@ -83,7 +83,7 @@ It will be purely database CRUD operations unlike SQL,Oracle.Mongo etc and Let R
 
 Earlier we have Seen StackExchange.Redis Lib to operate on Redis Cache. 
 
-Now we have Redis OM . Net to deal Redis DB directly.
+Now we have Redis OM . Net to deal Redis DB directly. [https://redis.io/docs/stack/get-started/tutorials/stack-dotnet/]
 
 
 This is end of Note/Article: and I thank you for reading this long story.
