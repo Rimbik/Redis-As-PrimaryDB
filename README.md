@@ -48,8 +48,11 @@ It is very important that you maintain “Eventual Consistency” in Redis Cache
 Now here is 1 problem. 
 
 The technique does not work well in Windows O/S because of Fork Write mechanism that is used by Redis – does not work very well in Windows and There is no official support from Microsoft if you use Redis on Windows ☹
+
 Windows uses WSL2 (Windows Subsystem for Linux -2) to run Redis on Windows and we do not know who is better among ‘Redis on Linux’ vs ‘Redis on Windows’. 
+
 Now at this stage, you are landed up with ‘Azure Cache for Redis’ – wait wait
+
 Azure Cache For Redis? Oh yes , this is Azure Managed Service for Redis using ‘Open Source Redis’ remember. You do not have Redis Enterprise Premium Feature here to note…. Any Third Party Redis providers be it Azure, AWS etc using Open Source Redis. Now you no longer need to think Windows issue as it is a fully Azure Managed Service. What you need to do is - Setup Azure Redis Cache and use it, remember the same 2 step process as I said in the very beginning. 
 
 You are Sole responsible for Maintaining data consistency 
