@@ -68,6 +68,14 @@ The Redis DB provides automated data caching in RAM-Memory while Reading Data fr
 
 REDIS ENTERPRISE CLOUD
 
+With Redis Enterprise Cloud we get fully manages Redis Cache + DB service hosted in Azure, AWS etc.
+We just need to spin-up and use the redis connection. Now we have Redis DB to operate self by redis CLI, .net, redis for windows client, nodeJs and so on. We can create user,group,access-key, triggers and many more like SQL, Oracles. We can save our data in JsonFormat too
+This github repo is mainly is for that purpose, where you will see ‘Redis Primary DB’ is playing with .Net Code as an API service using Redis OM .Net Package.
+You will see no more explicit caching code to save/delete key/value based data in cache. It will be purely database CRUD operations unlike SQL,Oracle.Mongo etc and Let Redis handle the caching internally.
+
+This is end of Note/Article: and I thank you for reading this long story.
+
+[Feb-16,2023]
 
 
 
