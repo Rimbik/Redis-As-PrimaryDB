@@ -60,7 +60,7 @@ You are Sole responsible for Maintaining data consistency
 
 This applies to any and All Databases available in Market be it RDBMS/DBMS or No SQLs
 
-Hooray…..    
+Hooray…..    A GOOD NEWS NOW ...
 
 No more pain now with ‘Redis As Primary Database’
 With huge demand of Redis Cache, Redis has made its Database available so that you can directly use ‘Redis DB’ as the Primary Database as opposed to those 
