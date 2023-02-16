@@ -16,16 +16,21 @@ Then return the data from Redis Cache
 When you read many articles, videos …. Hardly people talk about the Step:2 above as pretend as if Step:2 does the entire thing when the reality is, it is you have to maintain the data sync between your Primary database (in this case SQL Database) and Redis Cache. So what you do is - You read the data from SQL Db then store it to Redis Cache yourself.  Now at this stage you know - nothing is automatic, there is a new task to load data in Redis Cache and its you have to explicitly maintain the Consistency/Accuracy of data replication between SQL DB and Redis Cache.
 
 For this there are several approaches/patterns available and most precisely they are known as
+
 1.	Write-Through Pattern
 2.	Read-Through Pattern
 3.	Expiry Pattern
+	
 [There are many sub variants also available]
-1: With Write-through: You use Redis as Source Of Truth and then allow Redis to save the changes in SQL DB – Or Primary Database – and the saving can be done asynchronously or in Bulk
-
-2: Read-Through Pattern: In this technique, you use ‘Cache Miss’ technique and when no data found in cache, you can read the Primary DB and load the same data in Cache to return response.
-3: Expiry Pattern: It is applied when there is Command behavior like Create/Update/Delete, you delete the Cache and updates the primary database. So next time users will get data by Cache-Miss technique to be latest.
+1: With Write-through: You use Redis as Source Of Truth and then allow Redis to save the changes in SQL DB – Or Primary Database – and the saving can be done  
+   asynchronously or in Bulk
+2: Read-Through Pattern: In this technique, you use ‘Cache Miss’ technique and when no data found in cache, you can read the Primary DB and load the same data in Cache 
+   to return response.
+3: Expiry Pattern: It is applied when there is Command behavior like Create/Update/Delete, you delete the Cache and updates the primary database. So next time users 
+   will get data by Cache-Miss technique to be latest.
 
 The challenges will be now which one above is the best suited for you?
+
 Because all the above has some Advantages and Minor to Major disadvantages as well.
 It is very important that you maintain “Eventual Consistency” in Redis Cache.  The industry de facto standard is ‘Write-Through’ Pattern by which you use Redis cache as Source Of Truth and Let Redis update your underlying Primary DB silently in the background. 
 Now here is 1 problem. The technique does not work well in Windows O/S because of Fork Write mechanism that is used by Redis – does not work very well in Windows and There is no official support from Microsoft if you use Redis on Windows ☹
