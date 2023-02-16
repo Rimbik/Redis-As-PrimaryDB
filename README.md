@@ -5,13 +5,20 @@ Redis Cache – Redis As Primary Database
 There are lot of talk on Redis. Redis provides a memory caching technique and improves your application query performance significantly. Today I will summarize few key points on the Redis topic.
 
 When you come for Redis and want to implement it – you probably go through several Redis tutorials, discussion on youTube, google etc. Wherever you go, it will say Redis provides fastest caching service for your data. As if once you store your data to Redis cache, things will go fast. 
+
 Many of you must have known it, but for the others let me tell you it is not that straight forward.
+
 Redis Cache is just a Memory Caching Service and Isolated. It has nothing to do with your Primary Database. So given a scenario:
+
 1: You are designing an App/Service for faster Query response.
+
 In a hypothetical way, I presume you would have SQL Server as Primary Database. Then you end-up writing high performed SELECT queries in SQL stored proc by creating some Indexes. But the fact is you may come up with need of making it more performer by implementing Cache and selecting Redis Cache.
 With the given scenario now you have 2 Jobs to perform:
+
 1: Maintain high performed query in SQL Server as it is (As Primary Data Source)
+
 2: Maintain/sync the data also in Redis Cache
+
 Then return the data from Redis Cache
 When you read many articles, videos …. Hardly people talk about the Step:2 above as pretend as if Step:2 does the entire thing when the reality is, it is you have to maintain the data sync between your Primary database (in this case SQL Database) and Redis Cache. So what you do is - You read the data from SQL Db then store it to Redis Cache yourself.  Now at this stage you know - nothing is automatic, there is a new task to load data in Redis Cache and its you have to explicitly maintain the Consistency/Accuracy of data replication between SQL DB and Redis Cache.
 
@@ -24,8 +31,10 @@ For this there are several approaches/patterns available and most precisely they
 [There are many sub variants also available]
 1: With Write-through: You use Redis as Source Of Truth and then allow Redis to save the changes in SQL DB – Or Primary Database – and the saving can be done  
    asynchronously or in Bulk
+   
 2: Read-Through Pattern: In this technique, you use ‘Cache Miss’ technique and when no data found in cache, you can read the Primary DB and load the same data in Cache 
    to return response.
+   
 3: Expiry Pattern: It is applied when there is Command behavior like Create/Update/Delete, you delete the Cache and updates the primary database. So next time users 
    will get data by Cache-Miss technique to be latest.
 
