@@ -80,6 +80,12 @@ This github repo is mainly is for that purpose, where you will see ‘Redis Prim
 You will see no more explicit caching code to save/delete key/value based data in cache. 
 It will be purely database CRUD operations unlike SQL,Oracle.Mongo etc and Let Redis handle the caching internally.
 
+
+Earlier we have Seen StackExchange.Redis Lib to operate on Redis Cache. 
+
+Now we have Redis OM . Net to deal Redis DB directly.
+
+
 This is end of Note/Article: and I thank you for reading this long story.
 
 ------------------------++++ --------------------------------------------
